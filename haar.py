@@ -10,6 +10,8 @@ while True:
     gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     faces=face_cas.detectMultiScale(gray,1.3,5)
     for(x,y,w,h) in faces:
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(img,'person',(0,130), font, 1, (200,255,155))
         cv2.rectangle(img,(x,y),(x+w,y+w),(200,120,12),2)
         roi_gray=gray[y:y+h,x:x+h]
         roi_color=img[y:y+h,x:x+h]
