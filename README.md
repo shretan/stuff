@@ -1,1 +1,1 @@
-a basic code for facial detection using haar cascade.
+A basic code for facial detection using haar cascade.
